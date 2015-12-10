@@ -7,7 +7,7 @@ ax1 = fig.add_subplot(211)
 ax1.set_title('show stock car and future stock car',fontsize = 12)
 ax1.set_ylabel('value(millon)') #ล้าน
 x = [0,1,2,3,4,5]
-y = [2.81,29.9,31.8,34.2,35.6,36.5]
+y = [28.1,29.9,31.8,34.2,35.6,36.5]
 ax1.plot(x,y,c='b',label='stock car',linewidth=2.5)
 for x,y in zip(x,y):
     plt.text(x, y, '%.2f' % y, ha='center', va= 'bottom',\
