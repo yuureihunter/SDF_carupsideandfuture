@@ -39,3 +39,4 @@ for x,y in zip(g,h):
     bbox={'facecolor':'#FF8C00', 'alpha':0.5, 'pad':2.5})
 leg = ax2.legend(loc='upper right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
 plt.show()
+#test edit by sea#
