@@ -30,7 +30,7 @@ b = [0,1.7,1.8,2.4,1.3,0.9]
 ax2.plot(a,b,c='g',label='diff car')
 for x,y in zip(a,b):
     plt.text(x, y, '%.1f' % y, ha='center', va= 'bottom',\
-    bbox={'facecolor':'#54FF9F', 'alpha':0.5, 'pad':2.5})
+    bbox={'facecolor':'#54FF9F', 'alpha':0.4, 'pad':2.5})
 g = [5,6]
 h = [0.9,1.5] #ค่าสุดท้ายยังไม่ใช่ค่าจริง
 ax2.plot(g,h,c='r',label='future diff car')
