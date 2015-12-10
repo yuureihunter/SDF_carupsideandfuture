@@ -33,5 +33,4 @@ for x,y in zip(g,h):
     bbox={'facecolor':'#FF8C00', 'alpha':0.5, 'pad':2.5})
 
 leg = ax1.legend(loc='center right')
-print("end")
-print("test")
+plt.show()
