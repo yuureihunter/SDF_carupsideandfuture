@@ -40,3 +40,4 @@ for x,y in zip(g,h):
 leg = ax2.legend(loc='upper right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
 plt.show()
 #test edit by sea#
+#test edit by poogun#
