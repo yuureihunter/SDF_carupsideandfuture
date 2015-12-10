@@ -34,3 +34,4 @@ for x,y in zip(g,h):
 
 leg = ax1.legend(loc='center right')
 print("end")
+print("test")
