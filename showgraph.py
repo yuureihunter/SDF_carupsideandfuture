@@ -48,3 +48,4 @@ make_graph()
 #test edit by sea#
 #test edit by poogun#
 #ใครว่างฝากทดสอบโค้ดด้วยจ้า#
+print("test")
