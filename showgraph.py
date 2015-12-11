@@ -11,17 +11,17 @@ def make_graph():
     ax1.set_title('Show stock car and future stock car(2016).',fontsize = 12)
     ax1.set_ylabel('Total(Million)') #ล้าน
     
-    x = [0,1,2,3,4,5]
+    year = [0,1,2,3,4,5]
     y = [28.1,29.9,31.8,34.2,35.6,36.5]
-    ax1.plot(x,y,c='b',label='Stock car',linewidth=2.5)
-    for x,y in zip(x,y):
-        plt.text(x, y, '%.2f' % y, ha='center', va= 'bottom',\
+    ax1.plot(year,y,c='b',label='Stock car',linewidth=2.5)
+    for year,y in zip(year,y):
+        plt.text(year, y, '%.2f' % y, ha='center', va= 'bottom',\
         bbox={'facecolor':'#B0E0E6', 'alpha':0.5, 'pad':2.5}) #สีกล่องข้อความตามจุด
     w = [5,6]
     z = [36.5,38.3] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
     ax1.plot(w,z,c='r',label='Future stock car(2016)',linewidth=2.5)
-    for x,y in zip(w,z):
-        plt.text(x, y, '%.2f' % y, ha='center', va= 'bottom',\
+    for year,y in zip(w,z):
+        plt.text(year, y, '%.2f' % y, ha='center', va= 'bottom',\
         bbox={'facecolor':'#FA8072', 'alpha':0.5, 'pad':2.5})
     leg = ax1.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนรถสะสม
 
@@ -33,14 +33,14 @@ def make_graph():
     a = [0,1,2,3,4,5]
     b = [0,1.7,1.8,2.4,1.3,0.9]
     ax2.plot(a,b,c='g',label='Diff car',linewidth=2.5)
-    for x,y in zip(a,b):
-        plt.text(x, y, '%.1f' % y, ha='center', va= 'bottom',\
+    for year,y in zip(a,b):
+        plt.text(year, y, '%.1f' % y, ha='center', va= 'bottom',\
         bbox={'facecolor':'#54FF9F', 'alpha':0.4, 'pad':2.5})
     g = [5,6]
     h = [0.9,1.8] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
     ax2.plot(g,h,c='r',label='Future diff car(2016)',linewidth=2.5)
-    for x,y in zip(g,h):
-        plt.text(x, y, '%.1f' % y, ha='center', va= 'bottom',\
+    for year,y in zip(g,h):
+        plt.text(year, y, '%.1f' % y, ha='center', va= 'bottom',\
         bbox={'facecolor':'#FF8C00', 'alpha':0.5, 'pad':2.5})
     leg = ax2.legend(loc='upper right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
     plt.show()
