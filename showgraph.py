@@ -24,9 +24,9 @@ def make_graph():
         bbox={'facecolor':'#FA8072', 'alpha':0.5, 'pad':2.5})
     leg = graph_1.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนรถสะสม
 
-    ax2 = fig.add_subplot(212)
-    ax2.set_title('Show increment of car and future increment of car(2016)', fontsize = 12)
-    ax2.set_xlabel('Year201X')
+    graph_2 = fig.add_subplot(212)
+    graph_2.set_title('Show increment of car and future increment of car(2016)', fontsize = 12)
+    graph_2.set_xlabel('Year201X')
     ax2.set_ylabel('Total(Million)') #ล้าน
 
     year_two = [0, 1, 2, 3, 4, 5]
