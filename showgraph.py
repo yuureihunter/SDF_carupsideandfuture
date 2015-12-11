@@ -1,5 +1,4 @@
 """Graph of stock car in september 2010 - 2015(Thailand)"""
-import numpy as np
 import matplotlib.pyplot as plt
 def make_graph():
     """Make Line Graph in two box, first box show data of stock car(Show in Blue Line) and show data in future stock car(Show in Red Line)
