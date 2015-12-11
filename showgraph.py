@@ -45,7 +45,6 @@ def make_graph():
     leg = ax2.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
     plt.show()
 make_graph()
-#test edit by sea#
-#test edit by poogun#
+
 #ใครว่างฝากทดสอบโค้ดด้วยจ้า#
-print("test")
+
