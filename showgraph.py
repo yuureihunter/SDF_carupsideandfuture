@@ -27,21 +27,21 @@ def make_graph():
     graph_2 = fig.add_subplot(212)
     graph_2.set_title('Show increment of car and future increment of car(2016)', fontsize = 12)
     graph_2.set_xlabel('Year201X')
-    ax2.set_ylabel('Total(Million)') #ล้าน
+    graph_2.set_ylabel('Total(Million)') #ล้าน
 
     year_two = [0, 1, 2, 3, 4, 5]
     increase_car = [0, 1.7, 1.8, 2.4, 1.3, 0.9]
-    ax2.plot(year_two, increase_car, c='g', label='Diff car', linewidth=2.5)
+    graph_2.plot(year_two, increase_car, c='g', label='Diff car', linewidth=2.5)
     for year_one, number_car in zip(year_two, increase_car):
         plt.text(year_one, number_car, '%.1f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#54FF9F', 'alpha':0.4, 'pad':2.5})
     year_future_two = [5, 6]
     increase_future = [0.9, 1.8] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
-    ax2.plot(year_future_two, increase_future, c='r', label='Future diff car(2016)', linewidth=2.5)
+    graph_2.plot(year_future_two, increase_future, c='r', label='Future diff car(2016)', linewidth=2.5)
     for year_one, number_car in zip(year_future_two, increase_future):
         plt.text(year_one, number_car, '%.1f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#FF8C00', 'alpha':0.5, 'pad':2.5})
-    leg = ax2.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
+    leg = graph_2.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
     plt.show()
 make_graph()
 
