@@ -18,7 +18,7 @@ def make_graph():
         plt.text(x, y, '%.2f' % y, ha='center', va= 'bottom',\
         bbox={'facecolor':'#B0E0E6', 'alpha':0.5, 'pad':2.5}) #สีกล่องข้อความตามจุด
     w = [5,6]
-    z = [36.5,37.0] #ค่าสุดท้ายยังไมใช่ค่าจริง
+    z = [36.5,38.3] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
     ax1.plot(w,z,c='r',label='Future stock car(2016)',linewidth=2.5)
     for x,y in zip(w,z):
         plt.text(x, y, '%.2f' % y, ha='center', va= 'bottom',\
@@ -37,7 +37,7 @@ def make_graph():
         plt.text(x, y, '%.1f' % y, ha='center', va= 'bottom',\
         bbox={'facecolor':'#54FF9F', 'alpha':0.4, 'pad':2.5})
     g = [5,6]
-    h = [0.9,1.5] #ค่าสุดท้ายยังไม่ใช่ค่าจริง
+    h = [0.9,1.8] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
     ax2.plot(g,h,c='r',label='Future diff car(2016)',linewidth=2.5)
     for x,y in zip(g,h):
         plt.text(x, y, '%.1f' % y, ha='center', va= 'bottom',\
