@@ -14,13 +14,13 @@ def make_graph():
     number_car = [28.1, 29.9, 31.8, 34.2, 35.6, 36.5]
     graph_1.plot(year_one, number_car, c='b', label='Stock car', linewidth=2.5)
     for year_one, number_car in zip(year_one, number_car):
-        plt.text(year_one, number_car, '%.2f' % number_car, ha='center', va= 'bottom',\
+        plt.text(year_one, number_car, '%.1f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#B0E0E6', 'alpha':0.5, 'pad':2.5}) #สีกล่องข้อความตามจุด
     year_future_one = [5, 6]
     car_future = [36.5, 38.3] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
     graph_1.plot(year_future_one, car_future, c='r',label='Future stock car(2016)', linewidth=2.5)
     for year_one, number_car in zip(year_future_one, car_future):
-        plt.text(year_one, number_car, '%.2f' % number_car, ha='center', va= 'bottom',\
+        plt.text(year_one, number_car, '%.1f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#FA8072', 'alpha':0.5, 'pad':2.5})
     leg = graph_1.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนรถสะสม
 
