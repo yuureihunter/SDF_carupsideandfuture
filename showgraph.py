@@ -6,23 +6,23 @@ def make_graph():
     fig = plt.figure()
     plt.style.use('bmh') #ใส่พื้นหลัง
     fig.suptitle('Graph of stock car in september 2010 - 2015(Thailand)', fontsize=18, fontweight='bold')
-    ax1 = fig.add_subplot(211)
-    ax1.set_title('Show stock car and future stock car(2016).', fontsize = 12)
-    ax1.set_ylabel('Total(Million)') #ล้าน
+    graph_1 = fig.add_subplot(211)
+    graph_1.set_title('Show stock car and future stock car(2016).', fontsize = 12)
+    graph_1.set_ylabel('Total(Million)') #ล้าน
     
     year_one = [0, 1, 2, 3, 4, 5]
     number_car = [28.1, 29.9, 31.8, 34.2, 35.6, 36.5]
-    ax1.plot(year_one, number_car, c='b', label='Stock car', linewidth=2.5)
+    graph_1.plot(year_one, number_car, c='b', label='Stock car', linewidth=2.5)
     for year_one, number_car in zip(year_one, number_car):
         plt.text(year_one, number_car, '%.2f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#B0E0E6', 'alpha':0.5, 'pad':2.5}) #สีกล่องข้อความตามจุด
     year_future_one = [5, 6]
     car_future = [36.5, 38.3] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
-    ax1.plot(year_future_one, car_future, c='r',label='Future stock car(2016)', linewidth=2.5)
+    graph_1.plot(year_future_one, car_future, c='r',label='Future stock car(2016)', linewidth=2.5)
     for year_one, number_car in zip(year_future_one, car_future):
         plt.text(year_one, number_car, '%.2f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#FA8072', 'alpha':0.5, 'pad':2.5})
-    leg = ax1.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนรถสะสม
+    leg = graph_1.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนรถสะสม
 
     ax2 = fig.add_subplot(212)
     ax2.set_title('Show increment of car and future increment of car(2016)', fontsize = 12)
