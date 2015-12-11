@@ -1,12 +1,16 @@
+"""Graph of stock car in september 2010 - 2015(Thailand)"""
 import numpy as np
 import matplotlib.pyplot as plt
 def make_graph():
+    """Make Line Graph in two box, first box show data of stock car(Show in Blue Line) and show data in future stock car(Show in Red Line)
+       ,and second box show data of diff of car (Show in Line Green) and show data in future diff of car (Show in Red line)."""
     fig = plt.figure()
     plt.style.use('bmh') #ใส่พื้นหลัง
     fig.suptitle('Graph of stock car in september 2010 - 2015(Thailand)', fontsize=18, fontweight='bold')
     ax1 = fig.add_subplot(211)
     ax1.set_title('Show stock car and future stock car(2016).',fontsize = 12)
     ax1.set_ylabel('Total(Million)') #ล้าน
+    
     x = [0,1,2,3,4,5]
     y = [28.1,29.9,31.8,34.2,35.6,36.5]
     ax1.plot(x,y,c='b',label='Stock car',linewidth=2.5)
