@@ -36,10 +36,10 @@ def make_graph():
     for year_one, number_car in zip(year_two, increase_car):
         plt.text(year_one, number_car, '%.1f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#54FF9F', 'alpha':0.4, 'pad':2.5})
-    g = [5, 6]
-    h = [0.9, 1.8] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
-    ax2.plot(g, h, c='r', label='Future diff car(2016)', linewidth=2.5)
-    for year_one, number_car in zip(g, h):
+    year_future_two = [5, 6]
+    increase_future = [0.9, 1.8] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
+    ax2.plot(year_future_two, increase_future, c='r', label='Future diff car(2016)', linewidth=2.5)
+    for year_one, number_car in zip(year_future_two, increase_future):
         plt.text(year_one, number_car, '%.1f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#FF8C00', 'alpha':0.5, 'pad':2.5})
     leg = ax2.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
