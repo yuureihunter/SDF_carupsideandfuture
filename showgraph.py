@@ -42,7 +42,7 @@ def make_graph():
     for year,y in zip(g,h):
         plt.text(year, y, '%.1f' % y, ha='center', va= 'bottom',\
         bbox={'facecolor':'#FF8C00', 'alpha':0.5, 'pad':2.5})
-    leg = ax2.legend(loc='upper right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
+    leg = ax2.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนการเพิ่มขึ้นของรถ
     plt.show()
 make_graph()
 #test edit by sea#
