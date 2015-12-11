@@ -17,10 +17,10 @@ def make_graph():
     for year_one, number_car in zip(year_one, number_car):
         plt.text(year_one, number_car, '%.2f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#B0E0E6', 'alpha':0.5, 'pad':2.5}) #สีกล่องข้อความตามจุด
-    w = [5, 6]
-    z = [36.5, 38.3] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
-    ax1.plot(w, z, c='r',label='Future stock car(2016)', linewidth=2.5)
-    for year_one, number_car in zip(w, z):
+    year_future_one = [5, 6]
+    car_future = [36.5, 38.3] #ค่าสุดท้ายคิดเรียบร้อยแล้ว
+    ax1.plot(year_future_one, car_future, c='r',label='Future stock car(2016)', linewidth=2.5)
+    for year_one, number_car in zip(year_future_one, car_future):
         plt.text(year_one, number_car, '%.2f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#FA8072', 'alpha':0.5, 'pad':2.5})
     leg = ax1.legend(loc='lower right') #สิ้นสุดโค้ดกราฟแสดงจำนวนรถสะสม
@@ -30,10 +30,10 @@ def make_graph():
     ax2.set_xlabel('Year201X')
     ax2.set_ylabel('Total(Million)') #ล้าน
 
-    a = [0, 1, 2, 3, 4, 5]
-    b = [0, 1.7, 1.8, 2.4, 1.3, 0.9]
-    ax2.plot(a, b ,c='g', label='Diff car', linewidth=2.5)
-    for year_one, number_car in zip(a, b):
+    year_two = [0, 1, 2, 3, 4, 5]
+    increase_car = [0, 1.7, 1.8, 2.4, 1.3, 0.9]
+    ax2.plot(year_two, increase_car, c='g', label='Diff car', linewidth=2.5)
+    for year_one, number_car in zip(year_two, increase_car):
         plt.text(year_one, number_car, '%.1f' % number_car, ha='center', va= 'bottom',\
         bbox={'facecolor':'#54FF9F', 'alpha':0.4, 'pad':2.5})
     g = [5, 6]
