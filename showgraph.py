@@ -4,7 +4,7 @@ def make_graph():
     """Make Line Graph in two box, first box show data of stock car(Show in Blue Line) and show data in future stock car(Show in Red Line)
        ,and second box show data of diff of car (Show in Line Green) and show data in future diff of car (Show in Red line)."""
     fig = plt.figure()
-    plt.style.use('bmh') #ใส่พื้นหลัง
+    plt.style.use('ggplot') #ใส่พื้นหลัง
     fig.suptitle('Graph of stock car in september 2010 - 2015(Thailand)', fontsize=18, fontweight='bold')
     graph_1 = fig.add_subplot(211)
     graph_1.set_title('Show stock car and future stock car(2016).', fontsize = 12)
