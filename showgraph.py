@@ -1,4 +1,5 @@
 """Graph of stock car in september 2010 - 2015(Thailand)"""
+
 import matplotlib.pyplot as plt
 
 fig = plt.figure()
@@ -16,9 +17,10 @@ def make_graph():
     in_label = [['Stock car', 'Future stock car(2016)'], ['Diff car', 'Future diff car(2016)']]
     in_facecolor = [['#B0E0E6', '#FA8072'], ['#54FF9F', '#FF8C00']]
 
-    year_data = [[0, 1, 2, 3, 4, 5],[5, 6]]
+    year_data = [[0, 1, 2, 3, 4, 5], [5, 6]]
 
-    number_car_data = [[[28.1, 29.9, 31.8, 34.2, 35.6, 36.5],[36.5, 38.3]],[[0, 1.7, 1.8, 2.4, 1.3, 0.9],[0.9, 1.8]]]
+    number_car_data = [[[28.1, 29.9, 31.8, 34.2, 35.6, 36.5], [36.5, 38.3]]]
+    find_dif(number_car_data)
 
     subplot = [211, 212]
     title = ['Show stock car and future stock car(2016).',\
@@ -33,12 +35,24 @@ def make_graph():
 
         for j in range(2):
             number_car = number_car_data[i][j]
-            plot_graph(year_data[j], number_car, graph_, i, j, in_c, in_label,in_facecolor)
+            plot_graph(year_data[j], number_car, graph_, i, j, in_c, in_label, in_facecolor)
             leg = graph_.legend(loc='lower right')
 
     plt.show()
 
-def plot_graph(year_data, number_car, graph_, i, j, in_c, in_label,in_facecolor):
+def find_dif(number_car_data):
+    """return different of number car each years"""
+    ans = [[0]]
+    for j in range(len(number_car_data[0])):
+        data = number_car_data[0][j]
+        for i in range(1, len(data)):
+            dif = "%.2f" % (data[i] - data[i-1])
+            ans[j].append(float(dif))
+        if j == len(data) - 1:
+            return number_car_data.append(ans) 
+        ans.append([ans[j][-1]])
+
+def plot_graph(year_data, number_car, graph_, i, j, in_c, in_label, in_facecolor):
   """plot point on this graph"""
   graph_.plot(year_data, number_car, c=in_c[i][j], label=in_label[i][j], linewidth=2.5)
   for year_one, number_car in zip(year_data, number_car):
